@@ -20,7 +20,7 @@ class TransactionController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            'product_id' => 'required|exists:products_id',
+            'product_id' => 'required|exists:products,id',
             'quantity' => 'required|integer|min:1',
         ]);
 
